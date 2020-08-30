@@ -7,7 +7,7 @@ var APP = {
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.outputEncoding = THREE.sRGBEncoding;
 
-		var controls = new THREE.OrbitControls(camera);
+		var controls = new THREE.OrbitControls(camera renderer.domElement);
 		controls.enablePan = false;
 		controls.enableZoom = false; 
 		controls.enableDamping = true;
