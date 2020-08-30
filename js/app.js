@@ -7,6 +7,14 @@ var APP = {
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.outputEncoding = THREE.sRGBEncoding;
 
+		var controls = new THREE.OrbitControls(camera);
+		controls.enablePan = false;
+		controls.enableZoom = false; 
+		controls.enableDamping = true;
+		controls.minPolarAngle = 0.8;
+		controls.maxPolarAngle = 2.4;
+		controls.dampingFactor = 0.07;
+		controls.rotateSpeed = 0.07;
 
 		var loader = new THREE.ObjectLoader();
 		var camera, scene;
