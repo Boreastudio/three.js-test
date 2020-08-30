@@ -8,7 +8,7 @@ var APP = {
 		renderer.outputEncoding = THREE.sRGBEncoding;
 
 		var controls = new THREE.OrbitControls(camera renderer.domElement);
-		controls.enablePan = false;
+		controls.enablePan = true;
 		controls.enableZoom = false; 
 		controls.enableDamping = true;
 		controls.minPolarAngle = 0.8;
