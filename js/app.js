@@ -37,6 +37,15 @@ var APP = {
 			this.setCamera( loader.parse( json.camera ) );
 			
 			var controls = new THREE.OrbitControls(camera);
+			controls.update();
+			
+			function animate() {
+
+	requestAnimationFrame( animate );
+
+	// required if controls.enableDamping or controls.autoRotate are set to true
+	controls.update();
+	
 		controls.enablePan = false;
 		controls.enableZoom = false; 
 		controls.enableDamping = true;
@@ -44,6 +53,11 @@ var APP = {
 		controls.maxPolarAngle = 2.4;
 		controls.dampingFactor = 0.07;
 		controls.rotateSpeed = 0.07;
+				
+	renderer.render( scene, camera );
+
+}
+	
 
 			events = {
 				init: [],
